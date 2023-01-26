@@ -17,15 +17,21 @@ let newButton = document.querySelector(".new-book");
 newButton.addEventListener("click", (e) => {
   form.classList.toggle("hidden");
 });
-
+//Adding the form data into the library 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const title = document.querySelector('#title').value
-  const author = document.querySelector('#author').value
-  const pages = document.querySelector('#pages').value
-  const read = document.querySelector('#read').checked
+  let title = document.querySelector('#title').value
+  let author = document.querySelector('#author').value
+  let pages = document.querySelector('#pages').value
+  let read = document.querySelector('#read').checked
   addBookToLibrary(title, author, pages, read);
+  booksContainer.textContent =''
+  displayBooks();
+  console.log(myLibrary)
 });
+
+addBookToLibrary('2','ejjjj',1,true)
+addBookToLibrary('2','ejjjj',1,true)
 
 //Displays the current list of books into the page
 let displayBooks = () => {
@@ -50,6 +56,5 @@ displayBooks();
 function addBookToLibrary(author, title, pages, read) {
   let newBook = new Book(author, title, pages,read);
   myLibrary.push(newBook);
-  console.log(myLibrary)
-
 }
+
