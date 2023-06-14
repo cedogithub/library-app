@@ -50,26 +50,31 @@ const displayBooks = (library) => {
   for (let i = 0; i < library.length; i++) {
     const book = library[i];
 
+    // Create a card element for the book
     const card = document.createElement("div");
     card.classList.add("bookcard");
-
+  
+    // Create a title element and set its text content
     const titleElement = document.createElement("h3");
     titleElement.textContent = book.title;
     card.appendChild(titleElement);
-
+  
+    // Create an author element and set its text content
     const authorElement = document.createElement("p");
     authorElement.textContent = `Author: ${book.author}`;
     card.appendChild(authorElement);
-
+  
+    // Create a pages element and set its text content
     const pagesElement = document.createElement("p");
     pagesElement.textContent = `Pages: ${book.pages}`;
     card.appendChild(pagesElement);
-
+  
+    // Create a read element and set its text content
     const readElement = document.createElement("p");
     readElement.classList.add("read");
     readElement.textContent = `Read: ${book.read ? "Yes" : "No"}`;
     card.appendChild(readElement);
-
+    
     // Create a checkbox for marking the book as read or unread
     let read = document.createElement("input");
     read.type = "checkbox";
