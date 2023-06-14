@@ -1,6 +1,7 @@
 # My Library App (Version 1)
 
 This is the first version of the My Library app, a simple web application for managing your book library. With this app, you can keep track of your favorite books, including details like the author, title, number of pages, and whether you have read them or not.
+![image](https://github.com/cedogithub/library-app/assets/39746523/2e17c2d2-9c03-4a3d-88d5-a9e09b1374e6)
 
 ## Features
 
