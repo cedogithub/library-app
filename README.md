@@ -22,3 +22,27 @@ In future versions of the app, I plan to implement the following features and en
 - Additional Features: Explore more features like sorting, searching, and filtering books.
 
 Stay tuned for updates as I continue to improve the My Library app and provide a better book management experience!
+
+---
+
+# Ma Bibliothèque
+
+Une application web simple pour gérer votre collection de livres.
+
+## Fonctionnalités
+
+- Ajouter de nouveaux livres avec l'auteur, le titre et le nombre de pages.
+- Marquer les livres comme lus ou non lus.
+- Supprimer des livres de votre bibliothèque.
+
+## Prochaines fonctionnalités
+
+Dans les prochaines versions, je prévois d'ajouter les fonctionnalités suivantes :
+
+- Amélioration de la responsivité : Rendre l'application compatible avec les différents appareils et tailles d'écran.
+- Validation du formulaire : Ajouter une validation des champs du formulaire pour garantir des données correctes.
+- Stockage local : Implémenter la fonctionnalité de stockage local pour sauvegarder les livres de l'utilisateur.
+- Ajout d'images : Permettre aux utilisateurs d'ajouter des images de couverture de livre.
+- Plus de fonctionnalités : Ajouter d'autres fonctionnalités pour améliorer l'expérience utilisateur.
+
+Restez à l'écoute pour les mises à jour futures de Ma Bibliothèque !
