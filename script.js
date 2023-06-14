@@ -1,23 +1,23 @@
 // Define the Book class to create book objects
 class Book {
   constructor(author, title, pages, read, id) {
-    this.author = author;
-    this.title = title;
-    this.pages = pages;
-    this.read = read;
-    this.id = id;
+    this.author = author; // Author of the book
+    this.title = title; // Title of the book
+    this.pages = pages; // Number of pages in the book
+    this.read = read; // Whether the book has been read or not
+    this.id = id; // Unique identifier for the book
   }
 }
 
 // Select DOM elements
-const booksContainer = document.querySelector(".books-container");
-const form = document.querySelector("form");
-const newButton = document.querySelector(".new-book");
+const booksContainer = document.querySelector(".books-container"); // Container element to display books
+const form = document.querySelector("form"); // Form element for adding new books
+const newButton = document.querySelector(".new-book"); // Button to toggle visibility of the form
 
 // Create initial book objects
-const book1 = new Book("James", "Game of Thrones", 1, true, 291);
-const book2 = new Book("George", "Breaking Bad", 1, true, 129);
-let myLibrary = [book1, book2];
+const book1 = new Book("James", "Game of Thrones", 1, true, 291); // Sample book object
+const book2 = new Book("George", "Breaking Bad", 1, true, 129); // Sample book object
+let myLibrary = [book1, book2]; // Array to store the books in the library
 
 // Toggle form visibility when the "New Book" button is clicked
 newButton.addEventListener("click", () => {
@@ -27,42 +27,81 @@ newButton.addEventListener("click", () => {
 // Handle form submission
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const title = document.querySelector('#title').value;
-  const author = document.querySelector('#author').value;
-  const pages = document.querySelector('#pages').value;
-  const read = document.querySelector('#read').checked;
-  const id = Date.now();
 
+  // Get form input values
+  const title = document.querySelector("#title").value;
+  const author = document.querySelector("#author").value;
+  const pages = document.querySelector("#pages").value;
+  const read = document.querySelector("#read").checked;
+  const id = Date.now(); // Generate a unique ID using the current timestamp
+
+  // Add the new book to the library
   addBookToLibrary(author, title, pages, read, id);
-  booksContainer.textContent = '';
+
+  // Clear the books container and display the updated library
+  booksContainer.textContent = "";
   displayBooks(myLibrary);
 });
 
 // Display the books in the library
 const displayBooks = (library) => {
-  booksContainer.innerHTML = '';
+  booksContainer.innerHTML = "";
 
-  for (const [index, book] of library.entries()) {
+  for (let i = 0; i < library.length; i++) {
+    const book = library[i];
+
     const card = document.createElement("div");
-    card.classList.add('bookcard');
+    card.classList.add("bookcard");
 
-    card.appendChild(document.createTextNode(`Title: ${book.title}, `));
-    card.appendChild(document.createTextNode(`Author: ${book.author}, `));
-    card.appendChild(document.createTextNode(`Pages: ${book.pages}, `));
-    card.appendChild(document.createTextNode(`Read: ${book.read}`));
+    const titleElement = document.createElement("h3");
+    titleElement.textContent = book.title;
+    card.appendChild(titleElement);
 
-    const removeButton = document.createElement('button');
-    removeButton.textContent = 'Remove';
-    removeButton.classList.add('remove-button');
-    removeButton.setAttribute('data-id', index);
-    removeButton.addEventListener('click', (e) => {
-      const dataID = parseInt(e.target.getAttribute('data-id'));
-      const result = myLibrary.filter((_, i) => i !== dataID);
+    const authorElement = document.createElement("p");
+    authorElement.textContent = `Author: ${book.author}`;
+    card.appendChild(authorElement);
+
+    const pagesElement = document.createElement("p");
+    pagesElement.textContent = `Pages: ${book.pages}`;
+    card.appendChild(pagesElement);
+
+    const readElement = document.createElement("p");
+    readElement.classList.add("read");
+    readElement.textContent = `Read: ${book.read ? "Yes" : "No"}`;
+    card.appendChild(readElement);
+
+    // Create a checkbox for marking the book as read or unread
+    let read = document.createElement("input");
+    read.type = "checkbox";
+    read.checked = book.read;
+
+    read.addEventListener("change", (e) => {
+      book.read = e.target.checked;
+      // Find the parent book card element with the "closest()" method
+      const bookCard = e.target.closest(".bookcard");
+
+      // Find the read status element within the current book card
+      const readStatus = bookCard.querySelector(".read");
+      readStatus.textContent = `Read: ${book.read ? "Yes" : "No"}`;
+    });
+
+    card.appendChild(read);
+
+    // Create a remove button for deleting the book
+    const removeButton = document.createElement("button");
+    removeButton.textContent = "Remove";
+    removeButton.classList.add("remove-button");
+    removeButton.setAttribute("data-id", i);
+    removeButton.addEventListener("click", (e) => {
+      const dataID = parseInt(e.target.getAttribute("data-id"));
+      const result = myLibrary.filter((book, index) => index !== dataID);
       myLibrary = result;
       displayBooks(myLibrary);
     });
 
     card.appendChild(removeButton);
+
+    // Append the book card to the books container
     booksContainer.appendChild(card);
   }
 };
