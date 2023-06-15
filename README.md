@@ -1,7 +1,8 @@
-# celibrary v2 (English)
+# CeLibrary v2 (English)
 
+CeLibrary v2 is an enhanced version of the library management application designed to provide users with a seamless reading experience. With its intuitive interface, new UI, and stylish design, managing and organizing your book collection has never been easier.
 
-CeLibrary v2 is an enhanced version of the library management application designed to provide you with a seamless reading experience. With its intuitive interface, new UI, and stylish design, managing and organizing your book collection has never been easier.
+![image](https://github.com/cedogithub/library-app/assets/39746523/2e17c2d2-9c03-4a3d-88d5-a9e09b1374e6)
 
 ## Features
 
@@ -27,10 +28,11 @@ Stay tuned for these exciting updates and make the most out of your reading jour
 
 ---
 
-# celibrary v2 (French)
+# CeLibrary v2 (French)
 
+CeLibrary v2 est une version améliorée de l'application de gestion de bibliothèque conçue pour offrir une expérience de lecture fluide. Avec son interface intuitive, son nouveau design et son style élégant, la gestion et l'organisation de votre collection de livres n'ont jamais été aussi faciles.
 
-CeLibrary v2 est une version améliorée de l'application de gestion de bibliothèque conçue pour vous offrir une expérience de lecture fluide. Avec son interface intuitive, son nouveau design et son style élégant, la gestion et l'organisation de votre collection de livres n'ont jamais été aussi faciles.
+![image](https://github.com/cedogithub/library-app/assets/39746523/2e17c2d2-9c03-4a3d-88d5-a9e09b1374e6)
 
 ## Fonctionnalités
 

@@ -169,4 +169,4 @@ function animateRandomBookCard() {
 }
 
 // Start the loop to animate random book cards
-setInterval(animateRandomBookCard, 4000); // Adjust the delay between animations as needed
+setInterval(animateRandomBookCard, 4000); // Adjust the delay between animations
