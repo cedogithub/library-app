@@ -1,0 +1,30 @@
+[
+  {
+    "author": "J.R.R. Tolkien",
+    "title": "The Lord of the Rings",
+    "pages": 1178,
+    "read": true,
+    "image": "https://m.media-amazon.com/images/I/51t0Z0DfEfL.jpg"
+  },
+  {
+    "author": "George Orwell",
+    "title": "1984",
+    "pages": 328,
+    "read": true,
+    "image": "https://m.media-amazon.com/images/I/51iq85zLtRL.jpg"
+  },
+  {  
+    "author": "Harper Lee",
+    "title": "To Kill a Mockingbird",
+    "pages": 324,
+    "read": true,
+    "image": "https://m.media-amazon.com/images/I/71FxgtFKcQL.jpg   "
+  },
+  {
+    "author": "F. Scott Fitzgerald",
+    "title": "The Great Gatsby",
+    "pages": 180,
+    "read": true,
+    "image": "https://m.media-amazon.com/images/I/71mSLwEpHEL.jpg"
+  }
+]
