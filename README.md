@@ -2,8 +2,7 @@
 
 CeLibrary v2 is an enhanced version of the library management application designed to provide users with a seamless reading experience. With its intuitive interface, new UI, and stylish design, managing and organizing your book collection has never been easier.
 
-![image](https://github.com/cedogithub/library-app/assets/39746523/2e17c2d2-9c03-4a3d-88d5-a9e09b1374e6)
-
+![image](https://github.com/cedogithub/library-app/assets/39746523/33ffbbc2-282b-4e66-aadc-4f03e16c52e4)
 ## Features
 
 - **Add New Books**: Easily add new books to your library by providing the title, author, number of pages, and reading status. You can also upload a cover image for each book.
@@ -32,9 +31,7 @@ Stay tuned for these exciting updates and make the most out of your reading jour
 
 CeLibrary v2 est une version améliorée de l'application de gestion de bibliothèque conçue pour offrir une expérience de lecture fluide. Avec son interface intuitive, son nouveau design et son style élégant, la gestion et l'organisation de votre collection de livres n'ont jamais été aussi faciles.
 
-![image](https://github.com/cedogithub/library-app/assets/39746523/2e17c2d2-9c03-4a3d-88d5-a9e09b1374e6)
-
-## Fonctionnalités
+![image](https://github.com/cedogithub/library-app/assets/39746523/204253b9-2218-45df-9690-b39f1b2314c4)## Fonctionnalités
 
 - **Ajouter de nouveaux livres**: Ajoutez facilement de nouveaux livres à votre bibliothèque en fournissant le titre, l'auteur, le nombre de pages et l'état de lecture. Vous pouvez également télécharger une image de couverture pour chaque livre.
 
