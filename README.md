@@ -2,7 +2,7 @@
 
 CeLibrary v2 is an enhanced version of the library management application designed to provide users with a seamless reading experience. With its intuitive interface, new UI, and stylish design, managing and organizing your book collection has never been easier.
 
-![image](https://github.com/cedogithub/library-app/assets/39746523/33ffbbc2-282b-4e66-aadc-4f03e16c52e4)
+![image](https://github.com/cedogithub/library-app/assets/39746523/d37d0927-9086-4199-8d85-4cc5aeff0357)
 ## Features
 
 - **Add New Books**: Easily add new books to your library by providing the title, author, number of pages, and reading status. You can also upload a cover image for each book.
@@ -17,11 +17,9 @@ CeLibrary v2 is an enhanced version of the library management application design
 
 - **Sorting and Filtering**: Easily sort and filter your book collection based on various criteria such as author, genre, or reading status.
 
-- **Multiple Libraries**: Create and manage multiple libraries to separate different genres or categories of books.
+- **Authentification**: Create an account or Login.
 
 - **Form Validation**: Implement client-side form validation to ensure accurate and complete book entries.
-
-- **Enhanced Mobile Experience**: Optimize the application for a smooth mobile experience, allowing you to manage your library on the go.
 
 Stay tuned for these exciting updates and make the most out of your reading journey with CeLibrary!
 
@@ -31,7 +29,7 @@ Stay tuned for these exciting updates and make the most out of your reading jour
 
 CeLibrary v2 est une version améliorée de l'application de gestion de bibliothèque conçue pour offrir une expérience de lecture fluide. Avec son interface intuitive, son nouveau design et son style élégant, la gestion et l'organisation de votre collection de livres n'ont jamais été aussi faciles.
 
-![image](https://github.com/cedogithub/library-app/assets/39746523/204253b9-2218-45df-9690-b39f1b2314c4)## Fonctionnalités
+![image](https://github.com/cedogithub/library-app/assets/39746523/01c2b803-4a33-4b41-87a8-78b8e53fc528)
 
 - **Ajouter de nouveaux livres**: Ajoutez facilement de nouveaux livres à votre bibliothèque en fournissant le titre, l'auteur, le nombre de pages et l'état de lecture. Vous pouvez également télécharger une image de couverture pour chaque livre.
 
@@ -45,7 +43,7 @@ CeLibrary v2 est une version améliorée de l'application de gestion de biblioth
 
 - **Tri et filtrage**: Triez et filtrez facilement votre collection de livres en fonction de différents critères tels que l'auteur, le genre ou l'état de lecture.
 
-- **Bibliothèques multiples**: Créez et gérez plusieurs bibliothèques pour séparer les différents genres ou catégories de livres.
+- **Authentification**: Créez un compte ou connectez-vous.
 
 - **Validation de formulaire**: Mettez en place une validation de formulaire côté client pour garantir des entrées de livres précises et complètes.
 
