@@ -17,19 +17,25 @@ body {
 
 /* Navigation Styles */
 nav {
-  background: rgb(127, 82, 244);
-  background: linear-gradient(57deg, rgba(127, 82, 244, 1) 29%, rgba(65, 160, 244, 1) 67%);
   text-align: center;
   padding: 2rem 0;
-  color: #fff;
+  color: #41a0f4;
   font-size: 2rem;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
   display: flex;
   align-items: center;
   justify-content:center ;
-  gap: 1rem;
-  letter-spacing: 0.1ch;
+  gap: 0.3rem;
 }
-
+.title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #41a0f4;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid lightgrey;
+  width: fit-content
+  ;
+}
 /* Wrapper Styles */
 .wrapper {
   flex: 1;
@@ -97,9 +103,6 @@ button.not-read:hover{
 button:hover:not(.read,.not-read) {
   background-color: rgb(249, 250, 251);
 }
-button:hover.read,.not-read{
-
-}
 
 button:focus {
   outline: 2px solid transparent;
@@ -119,6 +122,11 @@ form {
 
 form h2 {
   text-align: center;
+  color:#41a0f4;
+}
+input:not([type="file"]):focus {
+  border: 1px solid #41a0f4;
+  outline: none;
 }
 
 span.close {
@@ -158,11 +166,16 @@ input:not([type="checkbox"]) {
   border-radius: 4px;
 }
 
+
 /* Footer Styles */
 footer {
   padding: 20px;
-  background: rgb(127,82,244);
-  background: linear-gradient(57deg, rgba(127,82,244,1) 29%, rgba(65,160,244,1) 67%);  color: white;
+  background: #41a0f4;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  color: white;
   margin-top: auto;
   text-align: center;
 }
@@ -171,7 +184,6 @@ footer {
 .bookcard {
   position: relative;
   border-radius: 10px;
-  color: rgb(5, 5, 92);  
   border: whitesmoke 2px solid;
   width: 220px;
   height: 340px;
