@@ -21,10 +21,11 @@ nav {
   padding: 2rem 0;
   color: #41a0f4;
   font-size: 2rem;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  border-bottom: 1px solid lightgray;
   display: flex;
   align-items: center;
-  justify-content:center ;
+
+  justify-content: center;
   gap: 0.3rem;
 }
 .title {
@@ -33,15 +34,13 @@ nav {
   color: #41a0f4;
   margin-bottom: 1rem;
   border-bottom: 1px solid lightgrey;
-  width: fit-content
-  ;
+  width: fit-content;
 }
 /* Wrapper Styles */
 .wrapper {
   flex: 1;
-  padding: 4rem 8rem;
+  padding: 8rem 5rem;
   overflow-x: hidden;
-  border-top: lightgrey solid  2px;
 }
 
 /* Books Container Styles */
@@ -57,7 +56,7 @@ nav {
 .bookcard p {
   margin: 0.2rem 0;
   font-size: 14px;
-  font-weight: 600 ;
+  font-weight: 600;
 }
 
 /* Read Class Styles */
@@ -81,26 +80,24 @@ button {
   user-select: none;
   touch-action: manipulation;
 }
-button.read{
+button.read {
   background-color: rgb(56, 148, 56);
   color: white;
 }
-button.read:hover{
+button.read:hover {
   color: white;
   background-color: rgb(5, 119, 5); /* Darker green shadow color */
-
 }
 
-button.not-read{
+button.not-read {
   background-color: rgb(205, 102, 102);
   color: white;
 }
-button.not-read:hover{
+button.not-read:hover {
   color: white;
-  background-color: rgb(149, 33, 33) /* Darker red shadow color */
-
+  background-color: rgb(149, 33, 33); /* Darker red shadow color */
 }
-button:hover:not(.read,.not-read) {
+button:hover:not(.read, .not-read) {
   background-color: rgb(249, 250, 251);
 }
 
@@ -122,7 +119,7 @@ form {
 
 form h2 {
   text-align: center;
-  color:#41a0f4;
+  color: #41a0f4;
 }
 input:not([type="file"]):focus {
   border: 1px solid #41a0f4;
@@ -166,7 +163,6 @@ input:not([type="checkbox"]) {
   border-radius: 4px;
 }
 
-
 /* Footer Styles */
 footer {
   padding: 20px;
@@ -186,7 +182,7 @@ footer {
   border-radius: 10px;
   border: whitesmoke 2px solid;
   width: 220px;
-  height: 340px;
+  height: 350px;
   transform-style: preserve-3d;
   perspective: 2000px;
   display: flex;
@@ -202,7 +198,6 @@ footer {
   padding: 0 2rem;
 }
 
-
 /* Cover Styles */
 .cover {
   position: absolute;
@@ -215,7 +210,8 @@ footer {
   transition: all 0.5s;
   transform-origin: 0;
   display: flex;
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
   align-items: center;
   justify-content: center;
 }
@@ -269,4 +265,62 @@ footer {
 .default-image img {
   width: 40px;
   height: 40px;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .books-container {
+    justify-items: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* Styles for screens up to 768px */
+  .wrapper {
+    padding: 4rem 2rem;
+  }
+
+  .books-container {
+    justify-content: center;
+  }
+
+  .bookcard {
+    width: 180px;
+    height: 280px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* Styles for screens up to 480px */
+  .title {
+    font-size: 24px;
+  }
+
+  .wrapper {
+    padding: 2rem 1rem;
+  }
+
+  .books-container {
+    justify-content: center;
+  }
+
+  .bookcard {
+    width: 160px;
+    height: 260px;
+  }
+  .bookcard p {
+    font-size: 13px;
+  }
+
+  .modal-content {
+    width: 90%;
+    max-width: 300px;
+  }
 }
