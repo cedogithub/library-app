@@ -73,66 +73,104 @@ modalForm.addEventListener("submit", (e) => {
 // Display the books in the library
 const displayBooks = (library) => {
   booksContainer.innerHTML = "";
-
   library.forEach((book, index) => {
+    // Create a div container for the book card
+    const cardContainer = document.createElement("div");
+    cardContainer.classList.add("card-container");
+  
+    // Create a div container for CRUD actions
+    const crudContainer = document.createElement("div");
+    crudContainer.classList.add("crud-container","hidden");
+    
+    // Create an icon element for the trash can
+    const trashIcon = document.createElement("i");
+    trashIcon.classList.add("fas", "fa-trash-can", "fa-light", "fa-lg"); // Added "fa-lg" class for larger size
+    trashIcon.style.color = "#000000";
+    crudContainer.appendChild(trashIcon);
+
+      // Add event listener to the trash icon for remove functionality
+      trashIcon.addEventListener("click", () => {
+        const result = myLibrary.filter((book, idx) => idx !== index);
+        myLibrary = result;
+        displayBooks(myLibrary);
+      });
+    
+
+  
+    // Create an icon element for the edit button
+    const editIcon = document.createElement("i");
+    editIcon.classList.add("fas", "fa-pen-to-square", "fa-lg");
+    editIcon.style.color = "#000000";
+    crudContainer.appendChild(editIcon);
+  
+    // Add additional elements or actions for CRUD operations inside this container
+  
     // Create a card element for the book
     const card = document.createElement("div");
     card.classList.add("bookcard");
-
+  
     // Create an image element for the book cover
     const coverElement = document.createElement("img");
     coverElement.classList.add("cover");
     if (book.image == "./book.png") coverElement.classList.add("default-image");
     coverElement.src = book.image; // Set the image source dynamically
     card.appendChild(coverElement);
-
+  
     // Create a title element and set its text content
     const titleElement = document.createElement("h3");
     titleElement.textContent = book.title;
     card.appendChild(titleElement);
-
+  
     // Create an author element and set its text content
     const authorElement = document.createElement("p");
     authorElement.textContent = `Author: ${book.author}`;
     card.appendChild(authorElement);
-
+  
     // Create a pages element and set its text content
     const pagesElement = document.createElement("p");
     pagesElement.textContent = `Pages: ${book.pages}`;
     card.appendChild(pagesElement);
-
+  
     // Create a button for marking the book as read or not read
     const readButton = document.createElement("button");
-    readButton.textContent = book.read ? "Read" : "Not Read";
+    readButton.textContent = book.read ? "Read ✓" : "Not Read";
     readButton.classList.add("read-button");
     readButton.classList.add(book.read ? "read" : "not-read");
-
+  
     readButton.addEventListener("click", () => {
       book.read = !book.read;
-      readButton.textContent = book.read ? "Read" : "Not Read";
+      readButton.textContent = book.read ? "Read ✓" : "Not Read";
       readButton.classList.toggle("read");
       readButton.classList.toggle("not-read");
     });
-
+  
     card.appendChild(readButton);
-
-    // Create a remove button for deleting the book
-    const removeButton = document.createElement("button");
-    removeButton.textContent = "Remove";
-    removeButton.classList.add("remove-button");
-    removeButton.setAttribute("data-id", index); // Use index as data-id
-    removeButton.addEventListener("click", (e) => {
-      const dataID = parseInt(e.target.getAttribute("data-id"));
-      const result = myLibrary.filter((book, index) => index !== dataID);
-      myLibrary = result;
-      displayBooks(myLibrary);
-    });
-
-    card.appendChild(removeButton);
-
-    // Append the book card to the books container
-    booksContainer.appendChild(card);
+  
+      // Create a remove button for deleting the book
+  const removeButton = document.createElement("button");
+  removeButton.textContent = "Remove";
+  removeButton.classList.add("remove-button");
+  removeButton.setAttribute("data-id", index); // Use index as data-id
+  removeButton.addEventListener("click", (e) => {
+    const dataID = parseInt(e.target.getAttribute("data-id"));
+    const result = myLibrary.filter((book, index) => index !== dataID);
+    myLibrary = result;
+    displayBooks(myLibrary);
   });
+  
+    card.appendChild(removeButton);
+  
+    // Append the CRUD container to the card container
+    cardContainer.appendChild(crudContainer);
+  
+    // Append the book card to the card container
+    cardContainer.appendChild(card);
+  
+    // Append the card container to the books container
+    booksContainer.appendChild(cardContainer);
+  });
+  
+  
 };
 
 // Add a book to the library

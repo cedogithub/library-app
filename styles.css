@@ -18,7 +18,7 @@ body {
 /* Navigation Styles */
 nav {
   text-align: center;
-  padding: 2rem 0;
+  padding: 1rem 0;
   color: #41a0f4;
   font-size: 2rem;
   border-bottom: 1px solid lightgray;
@@ -45,7 +45,7 @@ nav {
 
 /* Books Container Styles */
 .books-container {
-  padding-top: 2rem;
+  padding-top: 1rem;
   display: flex;
   flex-wrap: wrap;
   gap: 2.5rem;
@@ -56,7 +56,6 @@ nav {
 .bookcard p {
   margin: 0.2rem 0;
   font-size: 14px;
-  font-weight: 600;
 }
 
 /* Read Class Styles */
@@ -266,7 +265,18 @@ footer {
   width: 40px;
   height: 40px;
 }
+.crud-container.hidden{
+  display: none;
+}
 
+.crud-container {
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+i {
+  cursor: pointer;
+}
 /* Media Queries */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .wrapper {
@@ -289,11 +299,12 @@ footer {
 
   .books-container {
     justify-content: center;
+    gap: 1.2rem;
   }
 
   .bookcard {
-    width: 180px;
-    height: 280px;
+    width: 200px;
+    height: 300px;
   }
 }
 
@@ -309,15 +320,19 @@ footer {
 
   .books-container {
     justify-content: center;
+    gap: 1.1rem;
   }
 
   .bookcard {
-    width: 160px;
-    height: 260px;
+    width: 180px;
+    height: 290px;
   }
   .bookcard p {
     font-size: 13px;
+    padding: 0 2.5rem;
+    text-align: center;
   }
+ 
 
   .modal-content {
     width: 90%;
