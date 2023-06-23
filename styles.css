@@ -39,7 +39,7 @@ nav {
 /* Wrapper Styles */
 .wrapper {
   flex: 1;
-  padding: 8rem 5rem;
+  padding: 6rem 5rem;
   overflow-x: hidden;
 }
 
@@ -296,6 +296,11 @@ i {
   .wrapper {
     padding: 4rem 2rem;
   }
+  .buttons{
+    display: flex;
+    justify-content: center;
+    gap: 0.3rem;
+  }
 
   .books-container {
     justify-content: center;
@@ -358,4 +363,7 @@ select#sort-dropdown {
   border-radius: 0.5rem;
   font-weight: 600;
   border: 1px solid rgb(209, 213, 219);
+}
+select option{
+font-weight: 600;
 }
