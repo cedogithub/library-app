@@ -265,7 +265,7 @@ footer {
   width: 40px;
   height: 40px;
 }
-.crud-container.hidden{
+.crud-container.hidden {
   display: none;
 }
 
@@ -332,10 +332,30 @@ i {
     padding: 0 2.5rem;
     text-align: center;
   }
- 
 
   .modal-content {
     width: 90%;
     max-width: 300px;
   }
+}
+
+/* Sorting styles */
+.sorting {
+  background-color: #ffffff;
+  border: 1px solid rgb(209, 213, 219);
+  border-radius: 0.5rem;
+  color: #111827;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: 0.85rem 1rem;
+  width: fit-content;
+  display: inline;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+select#sort-dropdown {
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: 1px solid rgb(209, 213, 219);
 }
