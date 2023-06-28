@@ -17,16 +17,51 @@ body {
 
 /* Navigation Styles */
 nav {
-  text-align: center;
-  padding: 1rem 0;
+  padding: 1rem 3rem;
   color: #41a0f4;
-  font-size: 2rem;
+  font-size: 1.7rem;
   border-bottom: 1px solid lightgray;
   display: flex;
   align-items: center;
-
-  justify-content: center;
-  gap: 0.3rem;
+  justify-content: space-between;
+}
+nav svg {
+  transition: all 1s;
+}
+nav svg:hover{
+      transform: rotate(-45deg);
+}
+.nav__logo{
+  display: flex;
+  gap:1rem;
+  align-items: center;
+}
+.nav__link{
+  display: flex;
+  color: #111827;
+  
+  gap: 1rem;
+  align-items: center;
+  list-style-type: none;
+}
+.nav__link a{
+color: unset;
+font-weight: 600;
+text-decoration: none;
+}
+.nav__link li:nth-child(1){
+  background-color: #ffffff;
+  border: 1px solid rgb(209, 213, 219);
+  border-radius: 2rem;
+  color: #41a0f4;
+  padding: 0.5rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; 
+}
+.nav__link li:nth-child(2){
+  background-color: #41a0f4;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;  color: white  ;
 }
 .title {
   font-size: 36px;
@@ -277,6 +312,8 @@ footer {
 i {
   cursor: pointer;
 }
+
+
 /* Media Queries */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .wrapper {
