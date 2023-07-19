@@ -12,7 +12,7 @@
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; 
 }
 
 /* Navigation Styles */
@@ -37,6 +37,10 @@ nav svg:hover{
   align-items: center;
   letter-spacing:-1px;
 
+}
+.nav__logo a{
+ color: unset;
+ text-decoration: none;
 }
 .nav__link{
   display: flex;
@@ -173,13 +177,13 @@ button:focus-visible {
 }
 
 /* Form Styles */
-form {
+.modal form {
   display: flex;
   padding: 1em;
   flex-direction: column;
 }
 
-form h2 {
+.modal form h2 {
   text-align: center;
   color: #54a0ed;
 }
@@ -192,6 +196,72 @@ span.close {
   cursor: pointer;
   font-size: 2rem;
 }
+.auth-wrapper{
+}
+.auth-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+  padding-bottom: 9rem;
+  background-color: whitesmoke;
+}
+
+.auth-card {
+  width: 500px;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+
+.auth-card__body {
+  padding: 3rem;
+}
+
+.auth-card form {
+  color: #202f50;
+  font-weight: 800;
+
+}
+
+
+.auth-card h2 {
+  font-size: 2rem;
+  border-bottom: 2px solid #54a0ed;
+  text-align: center;
+  padding: 1rem;
+  margin: 2rem 0;
+  color: #202f50;
+}
+
+
+
+.auth-card input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.auth-card button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #54a0ed;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.auth-card button[type="submit"]:hover {
+  background-color: #0069d9;
+}
+
+.auth-card button[type="submit"]:focus {
+  outline: none;
+}
+
 
 /* Read Check Styles */
 .read-check {
