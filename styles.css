@@ -18,7 +18,7 @@ body {
 /* Navigation Styles */
 nav {
   padding: 1rem 3rem;
-  color: #41a0f4;
+  color: #54a0ed;
   font-size: 1.7rem;
   border-bottom: 1px solid lightgray;
   display: flex;
@@ -35,6 +35,8 @@ nav svg:hover{
   display: flex;
   gap:1rem;
   align-items: center;
+  letter-spacing:-1px;
+
 }
 .nav__link{
   display: flex;
@@ -47,34 +49,33 @@ color: unset;
 font-weight: 600;
 font-size: 1.2rem;
 text-decoration: none;
+padding: 0.5rem 1rem;
+display: flex;
+justify-content: center;
 }
-.nav__link li{
-  padding: 0.5rem 1rem;
-  display: flex;
-  justify-content: center;
-  border-radius: 2rem;
-}
-.nav__link li:nth-child(1){
+#login-link{
   background-color: #ffffff;
   border: 1px solid rgb(209, 213, 219);
-  color: #41a0f4;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; 
+  color: #54a0ed;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  border-radius: 2rem;
+ 
 }
-.nav__link li:nth-child(1):hover{
+#login-link:hover{
   background-color: #f7f5f5;
 }
-.nav__link li:nth-child(2):hover{
+#signup-link:hover,#logout-link:hover{
   background-color: #107bd8;
 }
-.nav__link li:nth-child(2){
-  background-color: #41a0f4;
- 
+#signup-link,#logout-link{
+  background-color: #54a0ed;
+  border-radius: 2rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;  color: white  ;
 }
 .title {
   font-size: 36px;
   font-weight: 800;
-  color: #41a0f4;
+  color: #54a0ed;
   margin-bottom: 1rem;
   border-bottom: 1px solid lightgrey;
   width: fit-content;
@@ -82,8 +83,26 @@ text-decoration: none;
 /* Wrapper Styles */
 .wrapper {
   flex: 1;
-  padding: 6rem 5rem;
+  padding: 2rem 5rem 6rem 5rem;
   overflow-x: hidden;
+ 
+}
+.welcome-message {
+text-align: center;
+font-size: 2rem;
+padding: 2rem 0 0rem 0;
+font-weight: 800;
+color: #54a0ed;
+letter-spacing:-1px;
+}
+.subheader{
+  padding-bottom: 4rem;
+  text-align: center;
+  font-size: 1.3rem;
+  letter-spacing:-1px;
+  font-weight: bold;
+  color: #202f50;
+
 }
 
 /* Books Container Styles */
@@ -92,6 +111,7 @@ text-decoration: none;
   display: flex;
   flex-wrap: wrap;
   gap: 2.5rem;
+  color: #202f50;
   width: fit-content;
 }
 
@@ -111,7 +131,7 @@ button {
   background-color: #ffffff;
   border: 1px solid rgb(209, 213, 219);
   border-radius: 0.5rem;
-  color: #111827;
+  color: #202f50;
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.25rem;
@@ -161,10 +181,10 @@ form {
 
 form h2 {
   text-align: center;
-  color: #41a0f4;
+  color: #54a0ed;
 }
 input:not([type="file"]):focus {
-  border: 1px solid #41a0f4;
+  border: 1px solid #54a0ed;
   outline: none;
 }
 
@@ -187,9 +207,17 @@ select#read {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #202f50;
   border: 1px solid #ced4da;
   border-radius: 4px;
+}
+.sorting label{
+  color: #202f50;
+
+}
+#sort-dropdown{
+  color: #202f50;
+
 }
 
 /* Input Styles (excluding checkboxes) */
@@ -208,7 +236,7 @@ input:not([type="checkbox"]) {
 /* Footer Styles */
 footer {
   padding: 20px;
-  background: #41a0f4;
+  background: #54a0ed;
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -222,6 +250,7 @@ footer {
 .bookcard {
   position: relative;
   border-radius: 10px;
+  background-color: white;
   border: whitesmoke 2px solid;
   width: 220px;
   height: 350px;
@@ -340,6 +369,10 @@ i {
   /* Styles for screens up to 768px */
   .wrapper {
     padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   .buttons{
     display: flex;
