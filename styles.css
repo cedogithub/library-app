@@ -261,7 +261,10 @@ span.close {
 .auth-card button[type="submit"]:focus {
   outline: none;
 }
-
+.error-message {
+color: red;
+display: none;
+padding-bottom: 1rem;}
 
 /* Read Check Styles */
 .read-check {
