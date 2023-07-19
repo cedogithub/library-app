@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Library</title>
-    <script defer src="./script.js"></script>
-    <script src="https://kit.fontawesome.com/345736990a.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <nav>
-      <div class="nav__logo"><h1>CeLibrary</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Library</title>
+  <script type="module" defer src="./script.js"></script>
+  <script src="https://kit.fontawesome.com/345736990a.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <nav>
+    <div class="nav__logo">
+      <h1>CeLibrary</h1>
       <!--Logo SVG-->
       <?xml version="1.0" encoding="UTF-8"?>
-      <svg width="60" height="60" version="1.1" viewBox="0 0 491.52 491.52" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-            <path d="m411.85 0h-288.56c-33.185 0-60.085 26.901-60.085 60.084v372.04c0.946-31.538 28.461-55.852 60.012-55.852h297.25c4.346 0 7.869 3.523 7.869 7.869v-367.66c0-9.104-7.381-16.484-16.485-16.484z" fill="#27A2DB"/>
-            <rect x="123.29" width="9.871" height="385.84" fill="#2D93BA"/>
-            <path d="m120.81 475.78c-24.475 0-44.116-21.105-41.679-46.071 2.124-21.759 21.685-37.699 43.547-37.699h297.79c4.346 0 7.869-3.523 7.869-7.869s-3.523-7.869-7.869-7.869h-297.25c-31.552 0-59.066 24.314-60.012 55.853-0.979 32.635 25.184 59.396 57.597 59.396h299.66c4.346 0 7.869-3.523 7.869-7.869v-5e-3c0-4.345-3.523-7.868-7.869-7.868h-299.66z" fill="#1C75A1"/>
-            <path d="m79.131 429.71c-2.438 24.965 17.203 46.072 41.679 46.072h298.17c-12.996-27.924-12.996-55.846 0-83.77h-296.3c-21.863 0-41.423 15.94-43.546 37.698z" fill="#EBF0F3"/>
-            <g fill="#E1E6E9">
-              <path d="m104.84 411.12h307.36c0.28-1.107 0.644-2.213 0.966-3.319h-308.32v3.319z"/>
-              <path d="m104.84 423.33h305.01c0.131-1.107 0.41-2.214 0.58-3.32h-305.59v3.32z"/>
-              <path d="m104.84 435.55h304.48c-0.022-1.107-0.022-2.213 0-3.32h-304.48v3.32z"/>
-              <path d="m104.84 447.78h305.59c-0.17-1.107-0.449-2.213-0.58-3.319h-305.01v3.319z"/>
-              <path d="m104.84 459.99h308.32c-0.322-1.107-0.687-2.215-0.966-3.32h-307.36v3.32z"/>
-            </g>
-            <polygon points="292.74 484.3 259.89 465.44 227.04 484.3 227.04 407.8 292.74 407.8" fill="#E56353"/>
-            </svg>
-                  <!--Logo--></div>
-      
-            <ul class="nav__link">
-              <li><a href="#">Login</a></li>
-              <li><a href="#"> Sign up</a></li>
-            </ul>
-         </nav>
-   
-         <div class="wrapper">
-      <div class="title">List of Books</div>
-      <div class="buttons">
+      <svg width="45" height="45" version="1.1" viewBox="0 0 491.52 491.52" xml:space="preserve"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="m411.85 0h-288.56c-33.185 0-60.085 26.901-60.085 60.084v372.04c0.946-31.538 28.461-55.852 60.012-55.852h297.25c4.346 0 7.869 3.523 7.869 7.869v-367.66c0-9.104-7.381-16.484-16.485-16.484z"
+          fill="#27A2DB" />
+        <rect x="123.29" width="9.871" height="385.84" fill="#2D93BA" />
+        <path
+          d="m120.81 475.78c-24.475 0-44.116-21.105-41.679-46.071 2.124-21.759 21.685-37.699 43.547-37.699h297.79c4.346 0 7.869-3.523 7.869-7.869s-3.523-7.869-7.869-7.869h-297.25c-31.552 0-59.066 24.314-60.012 55.853-0.979 32.635 25.184 59.396 57.597 59.396h299.66c4.346 0 7.869-3.523 7.869-7.869v-5e-3c0-4.345-3.523-7.868-7.869-7.868h-299.66z"
+          fill="#1C75A1" />
+        <path
+          d="m79.131 429.71c-2.438 24.965 17.203 46.072 41.679 46.072h298.17c-12.996-27.924-12.996-55.846 0-83.77h-296.3c-21.863 0-41.423 15.94-43.546 37.698z"
+          fill="#EBF0F3" />
+        <g fill="#E1E6E9">
+          <path d="m104.84 411.12h307.36c0.28-1.107 0.644-2.213 0.966-3.319h-308.32v3.319z" />
+          <path d="m104.84 423.33h305.01c0.131-1.107 0.41-2.214 0.58-3.32h-305.59v3.32z" />
+          <path d="m104.84 435.55h304.48c-0.022-1.107-0.022-2.213 0-3.32h-304.48v3.32z" />
+          <path d="m104.84 447.78h305.59c-0.17-1.107-0.449-2.213-0.58-3.319h-305.01v3.319z" />
+          <path d="m104.84 459.99h308.32c-0.322-1.107-0.687-2.215-0.966-3.32h-307.36v3.32z" />
+        </g>
+        <polygon points="292.74 484.3 259.89 465.44 227.04 484.3 227.04 407.8 292.74 407.8" fill="#E56353" />
+      </svg>
+      <!--Logo-->
+    </div>
+
+    <ul class="nav__link">
+      <!-- Other navigation links -->
+      <li id="logout-link" style="display: none;"><a href="#">Logout</a></li>
+      <li id="login-link"><a href="./login.html">Login</a></li>
+      <li id="signup-link"><a href="./signup.html">Sign up</a></li>
+    </ul>
+  </nav>
+
+  <div class="wrapper">
+    <div class="welcome-message"></div>
+    <div class="subheader">Manage your book library with ease.</div>
+
+    <div class="title">List of Books</div>
+    <div class="buttons">
       <!-- Button to open the modal form -->
       <button class="new-book">+ Add Book</button>
 
@@ -66,33 +82,84 @@
           </form>
         </div>
       </div>
-        <div class="sorting">
-          <label for="sort-dropdown">Sort by:</label>
-          <select id="sort-dropdown">
-            <option value="title">Title</option>
-            <option value="author">Author</option>
-            <option value="pages">Pages</option>
-            <option value="read">Read</option>
-            <option value="not-read">Not Read</option>
-          </select>
+      <div class="sorting">
+        <label for="sort-dropdown">Sort by:</label>
+        <select id="sort-dropdown">
+          <option value="title">Title</option>
+          <option value="author">Author</option>
+          <option value="pages">Pages</option>
+          <option value="read">Read</option>
+          <option value="not-read">Not Read</option>
+        </select>
       </div>
-      </div>
-      <div class="books-container"></div>
     </div>
-    <footer>
-      Cedogithub copyright © 2023 | Click to see code ->
-      <a href="https://github.com/cedogithub/library-app" target="_blank">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-          />
-        </svg>
-      </a>
-    </footer>
-  </body>
+    <div class="books-container"></div>
+  </div>
+  <footer>
+    Cedogithub copyright © 2023 | Click to see code ->
+    <a href="https://github.com/cedogithub/library-app" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path
+          d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+      </svg>
+    </a>
+  </footer>
+  <script type="module">
+    // Import the necessary Firebase modules
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+    import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDoopnPXcNbdwxDKpIT9AB6wA-D8rX_bRE",
+      authDomain: "celibrary-3d96f.firebaseapp.com",
+      projectId: "celibrary-3d96f",
+      storageBucket: "celibrary-3d96f.appspot.com",
+      messagingSenderId: "214869933074",
+      appId: "1:214869933074:web:f857b20f5d36a53a2faccb",
+      measurementId: "G-BHC3LTYS0C"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    const welcomeMessage = document.querySelector('.welcome-message');
+    const loginLink = document.querySelector('#login-link');
+    const signupLink = document.querySelector('#signup-link');
+    const logoutLink = document.querySelector('#logout-link');
+
+    // Check if a user is signed in
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in
+        welcomeMessage.textContent = `Hi, ${user.email}! Welcome to CeLibrary!`;
+        loginLink.style.display = 'none';
+        signupLink.style.display = 'none';
+        logoutLink.style.display = '';
+      } else {
+        // User is not signed in
+        welcomeMessage.textContent = "Hi, Guest! Welcome to CeLibrary!";
+        loginLink.style.display = '';
+        signupLink.style.display = '';
+        logoutLink.style.display = 'none';
+      }
+    });
+
+    // Logout functionality
+    logoutLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      signOut(auth)
+        .then(() => {
+          // Logout successful
+          console.log('User logged out');
+        })
+        .catch((error) => {
+          // Handle logout error
+          console.error('Logout error:', error);
+        });
+    });
+  </script>
+
+</body>
+
 </html>
