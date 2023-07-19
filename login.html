@@ -57,6 +57,8 @@
           <input type="email" id="email" required><br>
           <label for="password">Password:</label>
           <input type="password" id="password" required><br>
+          <div class="error-message"></div>
+
           <button type="submit">Sign in</button>
         </form>
       </div>
@@ -99,6 +101,7 @@
         e.preventDefault();
         const email = loginForm.email.value;
         const password = loginForm.password.value;
+        const errorMessageElement = document.querySelector(".error-message");
 
         signInWithEmailAndPassword(auth, email, password)
           .then((userCredential) => {
@@ -113,9 +116,10 @@
           .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-            // Handle login error (e.g., display an error message)
             console.error(errorCode, errorMessage);
+            errorMessageElement.textContent = "Invalid email or password.";
           });
+
       });
     </script>
   </body>
