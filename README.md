@@ -1,4 +1,4 @@
-## CeLibrary v2.2 (English)
+## CeLibrary v3.0 (English)
 
 CeLibrary is an enhanced library management application designed to provide users with a seamless reading experience. With its intuitive interface, new UI, and stylish design, managing and organizing your book collection has never been easier. Visit here: [CeLibrary](https://cedogithub.github.io/library-app/)
 
@@ -24,7 +24,7 @@ Make the most out of your reading journey with CeLibrary!
 
 ---
 
-## CeLibrary v2.2 (Français)
+## CeLibrary v3.0 (Français)
 
 CeLibrary est une application améliorée de gestion de bibliothèque conçue pour offrir une expérience de lecture fluide. Avec son interface intuitive, son nouveau design et son style élégant, la gestion et l'organisation de votre collection de livres n'ont jamais été aussi faciles. Visitez ici: [CeLibrary](https://cedogithub.github.io/library-app/)
 
