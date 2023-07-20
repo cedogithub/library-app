@@ -55,7 +55,12 @@
             <input type="email" id="email" required><br>
             <label for="password">Password:</label>
             <input type="password" id="password" required><br>
+            <label for="password-confirm">Confirm Password:</label>
+            <input type="password" id="password-confirm" required><br>          
+            <div class="error-message"></div>
             <button type="submit">Sign up</button>
+            <div class="success-message"></div>
+
           </form>
         </div>
       </div>
@@ -95,20 +100,31 @@
       const analytics = getAnalytics(app);
       const auth = getAuth(app);
       const signUpForm = document.querySelector("#signup-form");
+      const errorMessageElement = document.querySelector(".error-message");
+      const successMessage = document.querySelector(".success-message");
+      
       signUpForm.addEventListener("submit", (e) => {
         e.preventDefault();
         const email = signUpForm.email.value;
         const password = signUpForm.password.value;
-
+        const passwordConfirm = signUpForm["password-confirm"].value;
+        // Perform password validation
+        if (password !== passwordConfirm) {
+          errorMessageElement.textContent = "Passwords do not match.";
+          errorMessageElement.style.display = "block";
+          return; // Stop further execution
+        }
+            
         createUserWithEmailAndPassword(auth, email, password)
           .then((userCredential) => {
-            // Signed in
             const user = userCredential.user;
-            // Redirect to home page after successful signup
-            window.location.href = "login.html";
-            // Display welcome message on index.html
-            const welcomeMessage = document.querySelector(".welcome-message");
-            welcomeMessage.textContent = `Hi, ${user.email}! Welcome to CeLibrary!`;
+            // Display success message
+            successMessage.textContent = "Account created successfully!";
+            successMessage.style.display = "block";
+            // Redirect to home page after a delay
+            setTimeout(() => {
+              window.location.href = "login.html";
+            }, 2000); // Delay of 2 seconds (2000 milliseconds)
           })
           .catch((error) => {
             const errorCode = error.code;
@@ -117,6 +133,7 @@
             console.error(errorCode, errorMessage);
           });
       });
+      
     </script>
   </body>
 </html>

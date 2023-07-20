@@ -118,6 +118,8 @@
             const errorMessage = error.message;
             console.error(errorCode, errorMessage);
             errorMessageElement.textContent = "Invalid email or password.";
+            errorMessageElement.style.display = "block";
+
           });
 
       });
